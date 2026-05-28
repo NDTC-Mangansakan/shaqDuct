@@ -43,6 +43,15 @@ Database schema using drizzle
 queries
 
 - create a queries.ts file inside db folder and add the necessary code
-- 
+
+---------------------------------------------------------------------------------------------
+routes
+
+- create userRoutes.ts, productRoutes.ts, and commentRoutes.ts files inside routes folder and add the necessary code
+- add the routes in a middlware inside index.ts file inside src folder
+- create userController, productController, and commentController files inside controller folder and add the necessary code
+- add a types folder inside backend folder and inside types folder, add a globals.d.ts file with the following code:
+/// <reference types="@clerk/express/env" />
+
 
 
