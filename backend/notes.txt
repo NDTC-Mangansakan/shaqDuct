@@ -30,3 +30,19 @@ app.get("/", (req, res) => {
 
 app.listen(ENV.PORT, () => console.log("Server running on port " + ENV.PORT));
 
+
+
+---------------------------------------------------------------------------------------------
+Database schema using drizzle
+
+- create a schema.ts and index.ts files inside db folder and fill in the necessary code
+- create a drizzle.config.ts file inside backend folder and fill in the necessary code
+- add a db:push script and set it to "drizzle-kit push" so that you can push the tables to neon
+
+---------------------------------------------------------------------------------------------
+queries
+
+- create a queries.ts file inside db folder and add the necessary code
+- 
+
+
