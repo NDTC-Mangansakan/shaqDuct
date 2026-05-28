@@ -1,0 +1,3 @@
+---------------------------------------------------------------------
+- install react and tailwindcss, daisy ui, clerk react, react-router
+- create .env file and put the environment variables there (clerk)
