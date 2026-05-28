@@ -1,0 +1,32 @@
+backend folder setup
+
+- npm init -y
+- pnpm add express cors dotenv drizzle-orm pg @clerk/express
+- pnpm add -D typescript ts-node nodemon drizzle-kit @types/pg @types/express @types/cors
+- create src folder inside backend folder and create routes, controllers, db and config folders inside src folder
+- create tsconfig.json and nodemon.json files inside backend folder and fill in the necessary code
+- in package.json, add a dev script equal to 'nodemon' and a build script equal to 'tsc'
+- create index.ts file inside src folder and create a server
+- create a .env file inside backend folder and add the private infos
+- create a env.ts file inside config folder and fill the necessary code
+
+basic backend server setip: 
+
+import express from "express";
+import cors from 'cors'
+import { ENV } from "./config/env";
+import { clerkMiddleware } from "@clerk/express";
+
+const app = express();
+
+app.use(cors({origin: ENV.FRONTEND_URL}))
+app.use(clerkMiddleware());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.json({ success: true });
+});
+
+app.listen(ENV.PORT, () => console.log("Server running on port " + ENV.PORT));
+
